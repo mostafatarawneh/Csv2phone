@@ -63,10 +63,11 @@ class MainActivity : AppCompatActivity() {
             try {
                 while (reader.readLine().also { line = it } != null) {
                     val tokens = line!!.split(",")
-                    if (tokens.size >= 2) {
+                    if (tokens.size >= 3) {
                         val name = tokens[0]
                         val phoneNumber = tokens[1]
-                        val formattedData = "Name: $name\nPhone: $phoneNumber\n\n"
+                        val job = tokens[2]
+                        val formattedData = "Name: $name\nPhone: $phoneNumber\njob : $job\n"
                         dataList.add(formattedData)
                     }
                 }
